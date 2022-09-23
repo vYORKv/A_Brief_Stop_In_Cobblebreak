@@ -1,0 +1,552 @@
+[gd_scene load_steps=41 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Graphics/colored_packed.png" type="Texture" id=2]
+[ext_resource path="res://ObjectScripts/wStairsDown.gd" type="Script" id=3]
+[ext_resource path="res://ObjectScripts/wUpD2Toggle.gd" type="Script" id=4]
+[ext_resource path="res://ObjectScripts/wUpD1Toggle.gd" type="Script" id=5]
+[ext_resource path="res://NPCScripts/Kid.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Graphics/dialoguebox1.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Graphics/zxSpectrumStrictCondensed.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Assets/Audio/SFX/DialogueBeep.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Audio/SFX/DoorInter.wav" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Audio/SFX/DoorClose.wav" type="AudioStream" id=12]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="TileSet" id=10]
+0/name = "colored_packed.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 160, 272, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "colored_packed.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 176, 272, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "colored_packed.png 2"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 48, 96, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 3 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "colored_packed.png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 80, 128, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 4 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "colored_packed.png 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 80, 112, 16, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 5 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "colored_packed.png 5"
+5/texture = ExtResource( 2 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 128, 16, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape = SubResource( 6 )
+5/shape_one_way = false
+5/shape_one_way_margin = 1.0
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+6/name = "colored_packed.png 6"
+6/texture = ExtResource( 2 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 112, 112, 16, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 7 )
+6/shape_one_way = false
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+7/name = "colored_packed.png 7"
+7/texture = ExtResource( 2 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 32, 128, 16, 16 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape = SubResource( 8 )
+7/shape_one_way = false
+7/shape_one_way_margin = 1.0
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+7/z_index = 0
+8/name = "colored_packed.png 8"
+8/texture = ExtResource( 2 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 16, 128, 16, 16 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape = SubResource( 9 )
+8/shape_one_way = false
+8/shape_one_way_margin = 1.0
+8/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+8/z_index = 0
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 400, 0, 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 7.26274, 7.29971 )
+
+[sub_resource type="RectangleShape2D" id=13]
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 2 )
+region = Rect2( 48, 96, 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 2 )
+region = Rect2( 128, 144, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 2 )
+region = Rect2( 144, 144, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=19]
+animations = [ {
+"frames": [ SubResource( 17 ), SubResource( 18 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 2 )
+region = Rect2( 128, 144, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 2 )
+region = Rect2( 144, 144, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=24]
+animations = [ {
+"frames": [ SubResource( 22 ), SubResource( 23 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 2 )
+region = Rect2( 480, 48, 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="DynamicFont" id=28]
+font_data = ExtResource( 8 )
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 8, 8 )
+
+[node name="WhiteUp" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 10 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -131080, 0, 0, -131079, 0, 0, -131078, 1, 0, -131077, 0, 0, -131076, 0, 0, -131075, 0, 0, -131074, 0, 0, -131073, 1, 0, -196608, 0, 0, -196607, 0, 0, -196606, 0, 0, -196605, 0, 0, -196604, 1, 0, -196603, 0, 0, -196602, 0, 0, -65544, 0, 0, -131066, 0, 0, -8, 0, 0, -65530, 0, 0, 65528, 0, 0, 65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 65532, 0, 0, 65533, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 131064, 0, 0, 131065, 5, 0, 131067, 4, 0, 131068, 6, 0, 131069, 0, 0, 65537, 0, 0, 65539, 6, 0, 65540, 5, 0, 65541, 6, 0, 65542, 0, 0, 196600, 0, 0, 196605, 0, 0, 131078, 0, 0, 262136, 1, 0, 262141, 0, 0, 196609, 0, 0, 196614, 1, 0, 327672, 0, 0, 327676, 536870915, 0, 327677, 0, 0, 262145, 0, 0, 262150, 0, 0, 393208, 0, 0, 393213, 0, 0, 327681, 0, 0, 327682, 3, 0, 327686, 0, 0, 458744, 1, 0, 458749, 0, 0, 393217, 0, 0, 393222, 1, 0, 524280, 0, 0, 524281, 8, 0, 458753, 0, 0, 458754, 8, 0, 458755, 7, 0, 458758, 0, 0, 589816, 0, 0, 589817, 7, 0, 589818, 8, 0, 589821, 0, 0, 524289, 0, 0, 524294, 0, 0, 655352, 0, 0, 655353, 0, 0, 655354, 1, 0, 655355, 0, 0, 655356, 0, 0, 655357, 0, 0, 655358, 0, 0, 655359, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 1, 0, 589829, 0, 0, 589830, 0, 0 )
+
+[node name="LocationNode" type="Node2D" parent="."]
+position = Vector2( -16, -48 )
+
+[node name="Player" type="Area2D" parent="."]
+position = Vector2( -16, -16 )
+z_index = 1
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Player"]
+texture = SubResource( 11 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( 8, 8 )
+shape = SubResource( 12 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+
+[node name="RayCast2D" type="RayCast2D" parent="Player"]
+position = Vector2( 8, 8 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="FOV" type="Area2D" parent="Player"]
+position = Vector2( 8, 8 )
+collision_layer = 1024
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/FOV"]
+scale = Vector2( 0.25, 0.25 )
+shape = SubResource( 13 )
+disabled = true
+
+[node name="Tween" type="Tween" parent="Player"]
+
+[node name="Timer" type="Timer" parent="Player"]
+
+[node name="wStairsDown" type="KinematicBody2D" parent="."]
+position = Vector2( 16, -32 )
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="wStairsDown"]
+texture = SubResource( 14 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wStairsDown"]
+position = Vector2( 8, 8 )
+shape = SubResource( 15 )
+
+[node name="wStairsDownInter" type="Area2D" parent="wStairsDown"]
+collision_layer = 1024
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wStairsDown/wStairsDownInter"]
+position = Vector2( 8, 8 )
+shape = SubResource( 16 )
+
+[node name="wUpD1Toggle" type="KinematicBody2D" parent="."]
+position = Vector2( 16, 32 )
+script = ExtResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="wUpD1Toggle"]
+frames = SubResource( 19 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wUpD1Toggle"]
+position = Vector2( 8, 8 )
+shape = SubResource( 20 )
+
+[node name="wUpD1Inter" type="Area2D" parent="wUpD1Toggle"]
+collision_layer = 1024
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wUpD1Toggle/wUpD1Inter"]
+position = Vector2( 8, 8 )
+shape = SubResource( 21 )
+
+[node name="DoorOpen" type="AudioStreamPlayer" parent="wUpD1Toggle"]
+stream = ExtResource( 11 )
+bus = "SFX"
+
+[node name="DoorClose" type="AudioStreamPlayer" parent="wUpD1Toggle"]
+stream = ExtResource( 12 )
+bus = "SFX"
+
+[node name="wUpD2Toggle" type="KinematicBody2D" parent="."]
+position = Vector2( -48, 112 )
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="wUpD2Toggle"]
+frames = SubResource( 24 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wUpD2Toggle"]
+position = Vector2( 8, 8 )
+shape = SubResource( 20 )
+
+[node name="wUpD2Inter" type="Area2D" parent="wUpD2Toggle"]
+collision_layer = 1024
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wUpD2Toggle/wUpD2Inter"]
+position = Vector2( 8, 8 )
+shape = SubResource( 21 )
+
+[node name="DoorOpen" type="AudioStreamPlayer" parent="wUpD2Toggle"]
+stream = ExtResource( 11 )
+bus = "SFX"
+
+[node name="DoorClose" type="AudioStreamPlayer" parent="wUpD2Toggle"]
+stream = ExtResource( 12 )
+bus = "SFX"
+
+[node name="Kid" type="KinematicBody2D" parent="."]
+position = Vector2( -80, 32 )
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="Kid"]
+texture = SubResource( 25 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kid"]
+position = Vector2( 8, 8 )
+shape = SubResource( 26 )
+
+[node name="KidInter" type="Area2D" parent="Kid"]
+collision_layer = 1024
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kid/KidInter"]
+position = Vector2( 8, 8 )
+shape = SubResource( 27 )
+
+[node name="Dialogue0" type="NinePatchRect" parent="Kid"]
+visible = false
+margin_left = -32.0
+margin_top = -80.0
+margin_right = 168.0
+margin_bottom = -18.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Kid/Dialogue0"]
+margin_left = 6.0
+margin_top = 4.0
+margin_right = 194.0
+margin_bottom = 57.0
+custom_fonts/normal_font = SubResource( 28 )
+text = "Father grounded me because I lost his sword while I was playing in the western forest..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogue1" type="NinePatchRect" parent="Kid"]
+visible = false
+margin_left = -32.0
+margin_top = -80.0
+margin_right = 168.0
+margin_bottom = -18.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Kid/Dialogue1"]
+margin_left = 6.0
+margin_top = 4.0
+margin_right = 194.0
+margin_bottom = 57.0
+custom_fonts/normal_font = SubResource( 28 )
+text = "I wish I could go look for it, but I'm not allowed to leave my room..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Trigger1" type="Area2D" parent="Kid"]
+position = Vector2( 0, 32 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kid/Trigger1"]
+position = Vector2( 8, 8 )
+shape = SubResource( 29 )
+
+[node name="Trigger2" type="Area2D" parent="Kid"]
+position = Vector2( -16, 16 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kid/Trigger2"]
+position = Vector2( 8, 8 )
+shape = SubResource( 29 )
+
+[node name="Trigger3" type="Area2D" parent="Kid"]
+position = Vector2( -32, 0 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kid/Trigger3"]
+position = Vector2( 8, 8 )
+shape = SubResource( 29 )
+
+[node name="Trigger4" type="Area2D" parent="Kid"]
+position = Vector2( -16, -16 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kid/Trigger4"]
+position = Vector2( 8, 8 )
+shape = SubResource( 29 )
+
+[node name="Trigger5" type="Area2D" parent="Kid"]
+position = Vector2( 16, -16 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kid/Trigger5"]
+position = Vector2( 8, 8 )
+shape = SubResource( 29 )
+
+[node name="Trigger6" type="Area2D" parent="Kid"]
+position = Vector2( 16, 16 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kid/Trigger6"]
+position = Vector2( 8, 8 )
+shape = SubResource( 29 )
+
+[node name="DialoguePing" type="AudioStreamPlayer" parent="Kid"]
+stream = ExtResource( 9 )
+bus = "SFX"
+
+[connection signal="area_entered" from="wStairsDown/wStairsDownInter" to="wStairsDown" method="_on_wStairsDownInter_area_entered"]
+[connection signal="area_entered" from="wUpD1Toggle/wUpD1Inter" to="wUpD1Toggle" method="_on_wUpD1Inter_area_entered"]
+[connection signal="area_entered" from="wUpD2Toggle/wUpD2Inter" to="wUpD2Toggle" method="_on_wUpD2Inter_area_entered"]
+[connection signal="area_entered" from="Kid/KidInter" to="Kid" method="_on_KidInter_area_entered"]
+[connection signal="area_entered" from="Kid/Trigger1" to="Kid" method="_on_Trigger1_area_entered"]
+[connection signal="area_entered" from="Kid/Trigger2" to="Kid" method="_on_Trigger2_area_entered"]
+[connection signal="area_entered" from="Kid/Trigger3" to="Kid" method="_on_Trigger3_area_entered"]
+[connection signal="area_entered" from="Kid/Trigger4" to="Kid" method="_on_Trigger4_area_entered"]
+[connection signal="area_entered" from="Kid/Trigger5" to="Kid" method="_on_Trigger5_area_entered"]
+[connection signal="area_entered" from="Kid/Trigger6" to="Kid" method="_on_Trigger6_area_entered"]

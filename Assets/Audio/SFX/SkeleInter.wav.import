@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/SkeleInter.wav-80bf804d23d638f44247b3d8aa5f750d.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/SkeleInter.wav"
+dest_files=[ "res://.import/SkeleInter.wav-80bf804d23d638f44247b3d8aa5f750d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

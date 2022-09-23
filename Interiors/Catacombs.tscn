@@ -1,0 +1,784 @@
+[gd_scene load_steps=43 format=2]
+
+[ext_resource path="res://Assets/Graphics/colored_packed.png" type="Texture" id=1]
+[ext_resource path="res://ObjectScripts/RopePortal.gd" type="Script" id=2]
+[ext_resource path="res://Player.gd" type="Script" id=3]
+[ext_resource path="res://ObjectScripts/CataGate.gd" type="Script" id=4]
+[ext_resource path="res://NPCScripts/Skeleton.gd" type="Script" id=5]
+[ext_resource path="res://NPCScripts/Necromancer.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Graphics/dialoguebox1.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Graphics/zxSpectrumStrictCondensed.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Assets/Audio/SFX/CataDoorInter.wav" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Audio/SFX/DialogueBeep.wav" type="AudioStream" id=12]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="TileSet" id=8]
+0/name = "colored_packed.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 192, 192, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+3/name = "colored_packed.png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 240, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "colored_packed.png 4"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 304, 16, 16, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "colored_packed.png 5"
+5/texture = ExtResource( 1 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 16, 240, 16, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "colored_packed.png 6"
+6/texture = ExtResource( 1 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 80, 32, 16, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "colored_packed.png 7"
+7/texture = ExtResource( 1 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 208, 16, 16 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape = SubResource( 5 )
+7/shape_one_way = false
+7/shape_one_way_margin = 1.0
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+7/z_index = 0
+8/name = "colored_packed.png 8"
+8/texture = ExtResource( 1 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 64, 192, 16, 16 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape = SubResource( 6 )
+8/shape_one_way = false
+8/shape_one_way_margin = 1.0
+8/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+8/z_index = 0
+9/name = "colored_packed.png 9"
+9/texture = ExtResource( 1 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 32, 192, 16, 16 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape = SubResource( 7 )
+9/shape_one_way = false
+9/shape_one_way_margin = 1.0
+9/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+9/z_index = 0
+10/name = "colored_packed.png 10"
+10/texture = ExtResource( 1 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 384, 32, 16, 16 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape = SubResource( 2 )
+10/shape_one_way = false
+10/shape_one_way_margin = 1.0
+10/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+10/z_index = 0
+11/name = "colored_packed.png 11"
+11/texture = ExtResource( 1 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 448, 128, 16, 16 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape = SubResource( 3 )
+11/shape_one_way = false
+11/shape_one_way_margin = 1.0
+11/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+11/z_index = 0
+12/name = "colored_packed.png 12"
+12/texture = ExtResource( 1 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 464, 96, 16, 16 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape = SubResource( 4 )
+12/shape_one_way = false
+12/shape_one_way_margin = 1.0
+12/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+12/z_index = 0
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 400, 0, 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 7.26274, 7.29971 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 1 )
+region = Rect2( 192, 192, 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 1 )
+region = Rect2( 208, 176, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 1 )
+region = Rect2( 192, 176, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=17]
+animations = [ {
+"frames": [ SubResource( 15 ), SubResource( 16 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="DynamicFont" id=19]
+font_data = ExtResource( 8 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 1 )
+region = Rect2( 464, 96, 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 1 )
+region = Rect2( 384, 32, 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=30]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="DynamicFont" id=31]
+font_data = ExtResource( 8 )
+
+[sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 8, 8 )
+
+[node name="Catacombs" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 8 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -1835016, 7, 0, -1835015, 7, 0, -1835014, 7, 0, -1835013, 7, 0, -1835012, 7, 0, -1835011, 7, 0, -1835010, 7, 0, -1835009, 7, 0, -1900544, 7, 0, -1900543, 7, 0, -1900542, 7, 0, -1900541, 7, 0, -1900540, 7, 0, -1900539, 7, 0, -1900538, 7, 0, -1900537, 7, 0, -1900536, 7, 0, -1900535, 7, 0, -1900534, 7, 0, -1769480, 7, 0, -1835001, 6, 0, -1834998, 7, 0, -1703944, 7, 0, -1703940, 5, 0, -1769462, 7, 0, -1638408, 7, 0, -1638406, 3, 0, -1703929, 5, 0, -1703926, 7, 0, -1572872, 1610612743, 0, -1638400, 1610612744, 0, -1638399, 1610612744, 0, -1638398, 1610612744, 0, -1638390, 1610612743, 0, -1507336, 1610612743, 0, -1572859, 3, 0, -1572854, 1610612743, 0, -1441800, 1610612743, 0, -1441799, 6, 0, -1441796, 3, 0, -1507327, 3, 0, -1507318, 1610612743, 0, -1376264, 1610612743, 0, -1441785, 3, 0, -1441782, 1610612743, 0, -1310728, 1610612743, 0, -1376252, 3, 0, -1376247, 3, 0, -1376246, 1610612743, 0, -1245192, 1610612743, 0, -1245190, 3, 0, -1245186, 3, 0, -1310710, 1610612743, 0, -1179656, 1610612743, 0, -1245180, 5, 0, -1245177, 3, 0, -1245174, 1610612743, 0, -1114120, 1610612743, 0, -1114117, 3, 0, -1179640, 3, 0, -1179638, 1610612743, 0, -1048584, 1610612743, 0, -1048578, 5, 0, -1114103, 6, 0, -1114102, 1610612743, 0, -983048, 1610612743, 0, -983047, 1610612743, 0, -983046, 1610612743, 0, -983045, 1610612743, 0, -983044, 1610612743, 0, -983043, 1610612743, 0, -1048571, 1610612743, 0, -1048570, 1610612743, 0, -1048569, 1610612743, 0, -1048568, 1610612743, 0, -1048567, 1610612743, 0, -1048566, 1610612743, 0, -917507, 1610612743, 0, -917506, 1610612743, 0, -917505, 9, 0, -983040, 1610612743, 0, -983038, 1610612743, 0, -983037, 9, 0, -983036, 1610612743, 0, -983035, 1610612743, 0, -851971, 1610612743, 0, -851970, 6, 0, -917499, 1610612743, 0, -786435, 1610612743, 0, -786433, 1610612740, 0, -851964, 1610612740, 0, -851963, 1610612743, 0, -720899, 1610612743, 0, -786431, 1610612740, 0, -786427, 1610612743, 0, -655363, 9, 0, -655361, 8, 0, -720893, 8, 0, -720891, 9, 0, -589827, 1610612743, 0, -655360, 1610612740, 0, -655355, 1610612743, 0, -524291, 1610612743, 0, -589819, 1610612743, 0, -458755, 9, 0, -458753, 8, 0, -524286, 6, 0, -524285, 8, 0, -524283, 9, 0, -393219, 1610612743, 0, -393217, 1610612740, 0, -458751, 1610612740, 0, -458747, 7, 0, -327683, 1610612743, 0, -393214, 1610612740, 0, -393211, 1610612743, 0, -262147, 9, 0, -262145, 8, 0, -327677, 8, 0, -327676, 6, 0, -327675, 1610612743, 0, -196611, 1610612743, 0, -262139, 1610612743, 0, -131075, 1610612743, 0, -196606, 1610612740, 0, -196603, 7, 0, -65539, 9, 0, -65538, 1610612740, 0, -65537, 8, 0, -131069, 8, 0, -131067, 9, 0, -3, 1610612743, 0, -65531, 1610612743, 0, 65533, 1610612743, 0, 1, 1610612740, 0, 4, 6, 0, 5, 1610612743, 0, 131069, 1610612743, 0, 131070, 1610612743, 0, 131071, 1610612743, 0, 65539, 1610612743, 0, 65540, 1610612743, 0, 65541, 1610612743, 0, 196607, 1610612743, 0, 131074, 4, 0, 131075, 1610612743, 0, 262143, 1610612743, 0, 196608, 1610612743, 0, 196609, 1610612743, 0, 196610, 1610612743, 0, 196611, 1610612743, 0 )
+
+[node name="Player" type="Area2D" parent="."]
+position = Vector2( -16, -16 )
+z_index = 1
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Player"]
+texture = SubResource( 9 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( 8, 8 )
+shape = SubResource( 10 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+
+[node name="RayCast2D" type="RayCast2D" parent="Player"]
+position = Vector2( 8, 8 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="FOV" type="Area2D" parent="Player"]
+position = Vector2( 8, 8 )
+collision_layer = 1024
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/FOV"]
+scale = Vector2( 0.25, 0.25 )
+shape = SubResource( 11 )
+disabled = true
+
+[node name="Tween" type="Tween" parent="Player"]
+
+[node name="Timer" type="Timer" parent="Player"]
+
+[node name="RopePortal" type="KinematicBody2D" parent="."]
+position = Vector2( 16, 32 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="RopePortal"]
+texture = SubResource( 12 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RopePortal"]
+position = Vector2( 8, 8 )
+shape = SubResource( 13 )
+
+[node name="RopeInter" type="Area2D" parent="RopePortal"]
+collision_layer = 1024
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RopePortal/RopeInter"]
+position = Vector2( 8, 8 )
+shape = SubResource( 14 )
+
+[node name="CataGate" type="KinematicBody2D" parent="."]
+position = Vector2( 16, -240 )
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="CataGate"]
+frames = SubResource( 17 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CataGate"]
+position = Vector2( 8, 8 )
+shape = SubResource( 18 )
+
+[node name="Dialogue0" type="NinePatchRect" parent="CataGate"]
+visible = false
+margin_left = -48.0
+margin_top = -32.0
+margin_right = 72.0
+margin_bottom = -2.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CataGate/Dialogue0"]
+margin_left = 4.0
+margin_right = 119.0
+margin_bottom = 29.0
+custom_fonts/normal_font = SubResource( 19 )
+text = "It's locked. You need the key to open it."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CataGateInter" type="Area2D" parent="CataGate"]
+collision_layer = 1024
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CataGate/CataGateInter"]
+position = Vector2( 8, 8 )
+shape = SubResource( 20 )
+
+[node name="SFX" type="AudioStreamPlayer" parent="CataGate"]
+stream = ExtResource( 11 )
+bus = "SFX"
+
+[node name="Trigger1" type="Area2D" parent="CataGate"]
+position = Vector2( 0, 32 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CataGate/Trigger1"]
+position = Vector2( 8, 8 )
+shape = SubResource( 21 )
+
+[node name="Trigger2" type="Area2D" parent="CataGate"]
+position = Vector2( -16, 16 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CataGate/Trigger2"]
+position = Vector2( 8, 8 )
+shape = SubResource( 21 )
+
+[node name="Trigger3" type="Area2D" parent="CataGate"]
+position = Vector2( 16, 16 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CataGate/Trigger3"]
+position = Vector2( 8, 8 )
+shape = SubResource( 21 )
+
+[node name="Trigger4" type="Area2D" parent="CataGate"]
+position = Vector2( -16, 32 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CataGate/Trigger4"]
+position = Vector2( 8, 8 )
+shape = SubResource( 22 )
+
+[node name="Trigger5" type="Area2D" parent="CataGate"]
+position = Vector2( 16, 32 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CataGate/Trigger5"]
+position = Vector2( 8, 8 )
+shape = SubResource( 22 )
+
+[node name="Skeleton" type="KinematicBody2D" parent="."]
+position = Vector2( 16, -368 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="Skeleton"]
+texture = SubResource( 23 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton"]
+position = Vector2( 8, 8 )
+shape = SubResource( 24 )
+
+[node name="InvisWall1" type="StaticBody2D" parent="Skeleton"]
+position = Vector2( -16, 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton/InvisWall1"]
+position = Vector2( 8, 8 )
+shape = SubResource( 25 )
+
+[node name="InvisWall1" type="StaticBody2D" parent="Skeleton/InvisWall1"]
+position = Vector2( 0, 96 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton/InvisWall1/InvisWall1"]
+position = Vector2( 8, 8 )
+shape = SubResource( 25 )
+
+[node name="InvisWall2" type="StaticBody2D" parent="Skeleton/InvisWall1"]
+position = Vector2( 0, 80 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton/InvisWall1/InvisWall2"]
+position = Vector2( 8, 8 )
+shape = SubResource( 25 )
+
+[node name="InvisWall3" type="StaticBody2D" parent="Skeleton/InvisWall1"]
+position = Vector2( 0, 64 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton/InvisWall1/InvisWall3"]
+position = Vector2( 8, 8 )
+shape = SubResource( 25 )
+
+[node name="InvisWall4" type="StaticBody2D" parent="Skeleton/InvisWall1"]
+position = Vector2( 0, 48 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton/InvisWall1/InvisWall4"]
+position = Vector2( 8, 8 )
+shape = SubResource( 25 )
+
+[node name="InvisWall5" type="StaticBody2D" parent="Skeleton/InvisWall1"]
+position = Vector2( 0, 32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton/InvisWall1/InvisWall5"]
+position = Vector2( 8, 8 )
+shape = SubResource( 25 )
+
+[node name="InvisWall6" type="StaticBody2D" parent="Skeleton/InvisWall1"]
+position = Vector2( 0, 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton/InvisWall1/InvisWall6"]
+position = Vector2( 8, 8 )
+shape = SubResource( 25 )
+
+[node name="InvisWall7" type="StaticBody2D" parent="Skeleton/InvisWall1"]
+position = Vector2( 32, 32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton/InvisWall1/InvisWall7"]
+position = Vector2( 8, 8 )
+shape = SubResource( 25 )
+
+[node name="InvisWall8" type="StaticBody2D" parent="Skeleton/InvisWall1"]
+position = Vector2( 32, 48 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton/InvisWall1/InvisWall8"]
+position = Vector2( 8, 8 )
+shape = SubResource( 25 )
+
+[node name="InvisWall9" type="StaticBody2D" parent="Skeleton/InvisWall1"]
+position = Vector2( 32, 64 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton/InvisWall1/InvisWall9"]
+position = Vector2( 8, 8 )
+shape = SubResource( 25 )
+
+[node name="InvisWall10" type="StaticBody2D" parent="Skeleton/InvisWall1"]
+position = Vector2( 32, 80 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton/InvisWall1/InvisWall10"]
+position = Vector2( 8, 8 )
+shape = SubResource( 25 )
+
+[node name="InvisWall11" type="StaticBody2D" parent="Skeleton/InvisWall1"]
+position = Vector2( 32, 96 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton/InvisWall1/InvisWall11"]
+position = Vector2( 8, 8 )
+shape = SubResource( 25 )
+
+[node name="InvisWall12" type="StaticBody2D" parent="Skeleton/InvisWall1"]
+position = Vector2( 32, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton/InvisWall1/InvisWall12"]
+position = Vector2( 8, 8 )
+shape = SubResource( 25 )
+
+[node name="InvisWall13" type="StaticBody2D" parent="Skeleton/InvisWall1"]
+position = Vector2( 32, 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton/InvisWall1/InvisWall13"]
+position = Vector2( 8, 8 )
+shape = SubResource( 25 )
+
+[node name="SkeletonInter" type="Area2D" parent="Skeleton"]
+collision_layer = 1024
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton/SkeletonInter"]
+position = Vector2( 8, 8 )
+shape = SubResource( 26 )
+
+[node name="Kill" type="Area2D" parent="Skeleton"]
+position = Vector2( 0, 16 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton/Kill"]
+position = Vector2( 8, 8 )
+shape = SubResource( 27 )
+
+[node name="Necromancer" type="KinematicBody2D" parent="."]
+position = Vector2( 16, -432 )
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="Necromancer"]
+texture = SubResource( 28 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Necromancer"]
+position = Vector2( 8, 8 )
+shape = SubResource( 29 )
+
+[node name="DialoguePing" type="AudioStreamPlayer" parent="Necromancer"]
+stream = ExtResource( 12 )
+bus = "SFX"
+
+[node name="NecroInter" type="Area2D" parent="Necromancer"]
+collision_layer = 1024
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Necromancer/NecroInter"]
+position = Vector2( 8, 8 )
+shape = SubResource( 30 )
+
+[node name="Dialogue0" type="NinePatchRect" parent="Necromancer"]
+visible = false
+margin_left = -80.0
+margin_top = -80.0
+margin_right = 120.0
+margin_bottom = -18.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Necromancer/Dialogue0"]
+margin_left = 6.0
+margin_top = 4.0
+margin_right = 194.0
+margin_bottom = 57.0
+custom_fonts/normal_font = SubResource( 31 )
+text = "Hmm.. You have defeated my minion. It seems this town is not as vulnerable as I thought."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogue1" type="NinePatchRect" parent="Necromancer"]
+visible = false
+margin_left = -80.0
+margin_top = -80.0
+margin_right = 120.0
+margin_bottom = -18.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Necromancer/Dialogue1"]
+margin_left = 6.0
+margin_top = 4.0
+margin_right = 194.0
+margin_bottom = 57.0
+custom_fonts/normal_font = SubResource( 31 )
+text = "No worries, I have sapped enough energy from the surrounding area to quench my thirst. This town was always going to be a quick stop."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogue2" type="NinePatchRect" parent="Necromancer"]
+visible = false
+margin_left = -80.0
+margin_top = -80.0
+margin_right = 120.0
+margin_bottom = -18.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Necromancer/Dialogue2"]
+margin_left = 6.0
+margin_top = 4.0
+margin_right = 194.0
+margin_bottom = 57.0
+custom_fonts/normal_font = SubResource( 31 )
+text = "It is time for me to leave. I advise that you do not try to follow me..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Trigger1" type="Area2D" parent="Necromancer"]
+position = Vector2( -16, 16 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Necromancer/Trigger1"]
+position = Vector2( 8, 8 )
+shape = SubResource( 32 )
+
+[node name="Trigger2" type="Area2D" parent="Necromancer"]
+position = Vector2( -32, 0 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Necromancer/Trigger2"]
+position = Vector2( 8, 8 )
+shape = SubResource( 32 )
+
+[node name="Trigger3" type="Area2D" parent="Necromancer"]
+position = Vector2( -16, -16 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Necromancer/Trigger3"]
+position = Vector2( 8, 8 )
+shape = SubResource( 32 )
+
+[node name="Trigger4" type="Area2D" parent="Necromancer"]
+position = Vector2( 16, -16 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Necromancer/Trigger4"]
+position = Vector2( 8, 8 )
+shape = SubResource( 32 )
+
+[node name="Trigger5" type="Area2D" parent="Necromancer"]
+position = Vector2( 32, 0 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Necromancer/Trigger5"]
+position = Vector2( 8, 8 )
+shape = SubResource( 32 )
+
+[node name="Trigger6" type="Area2D" parent="Necromancer"]
+position = Vector2( 16, 16 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Necromancer/Trigger6"]
+position = Vector2( 8, 8 )
+shape = SubResource( 32 )
+
+[node name="Trigger7" type="Area2D" parent="Necromancer"]
+position = Vector2( 32, -16 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Necromancer/Trigger7"]
+position = Vector2( 8, 8 )
+shape = SubResource( 22 )
+
+[node name="Trigger8" type="Area2D" parent="Necromancer"]
+position = Vector2( 32, 16 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Necromancer/Trigger8"]
+position = Vector2( 8, 8 )
+shape = SubResource( 22 )
+
+[node name="Trigger9" type="Area2D" parent="Necromancer"]
+position = Vector2( -32, -16 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Necromancer/Trigger9"]
+position = Vector2( 8, 8 )
+shape = SubResource( 22 )
+
+[node name="Trigger10" type="Area2D" parent="Necromancer"]
+position = Vector2( -32, 16 )
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Necromancer/Trigger10"]
+position = Vector2( 8, 8 )
+shape = SubResource( 22 )
+
+[connection signal="area_entered" from="RopePortal/RopeInter" to="RopePortal" method="_on_RopeInter_area_entered"]
+[connection signal="area_entered" from="CataGate/CataGateInter" to="CataGate" method="_on_CataGateInter_area_entered"]
+[connection signal="area_entered" from="CataGate/Trigger1" to="CataGate" method="_on_Trigger1_area_entered"]
+[connection signal="area_entered" from="CataGate/Trigger2" to="CataGate" method="_on_Trigger2_area_entered"]
+[connection signal="area_entered" from="CataGate/Trigger3" to="CataGate" method="_on_Trigger3_area_entered"]
+[connection signal="area_entered" from="CataGate/Trigger4" to="CataGate" method="_on_Trigger4_area_entered"]
+[connection signal="area_entered" from="CataGate/Trigger5" to="CataGate" method="_on_Trigger5_area_entered"]
+[connection signal="area_entered" from="Skeleton/SkeletonInter" to="Skeleton" method="_on_SkeletonInter_area_entered"]
+[connection signal="area_entered" from="Skeleton/Kill" to="Skeleton" method="_on_Kill_area_entered"]
+[connection signal="area_entered" from="Necromancer/NecroInter" to="Necromancer" method="_on_NecroInter_area_entered"]
+[connection signal="area_entered" from="Necromancer/Trigger1" to="Necromancer" method="_on_Trigger1_area_entered"]
+[connection signal="area_entered" from="Necromancer/Trigger2" to="Necromancer" method="_on_Trigger2_area_entered"]
+[connection signal="area_entered" from="Necromancer/Trigger3" to="Necromancer" method="_on_Trigger3_area_entered"]
+[connection signal="area_entered" from="Necromancer/Trigger4" to="Necromancer" method="_on_Trigger4_area_entered"]
+[connection signal="area_entered" from="Necromancer/Trigger5" to="Necromancer" method="_on_Trigger5_area_entered"]
+[connection signal="area_entered" from="Necromancer/Trigger6" to="Necromancer" method="_on_Trigger6_area_entered"]
+[connection signal="area_entered" from="Necromancer/Trigger7" to="Necromancer" method="_on_Trigger7_area_entered"]
+[connection signal="area_entered" from="Necromancer/Trigger8" to="Necromancer" method="_on_Trigger8_area_entered"]
+[connection signal="area_entered" from="Necromancer/Trigger9" to="Necromancer" method="_on_Trigger9_area_entered"]
+[connection signal="area_entered" from="Necromancer/Trigger10" to="Necromancer" method="_on_Trigger10_area_entered"]
